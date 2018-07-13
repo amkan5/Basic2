@@ -1,0 +1,12 @@
+package domain;
+
+public class RecordBean {
+	protected String grade,recordSeq, average;
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+}

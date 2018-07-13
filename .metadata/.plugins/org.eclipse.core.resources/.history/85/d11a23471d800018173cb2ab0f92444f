@@ -1,0 +1,25 @@
+package domain;
+
+public class record {
+	protected String grade;
+	protected int recordSeq, average;
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public int getRecordSeq() {
+		return recordSeq;
+	}
+	public void setRecordSeq(int recordSeq) {
+		this.recordSeq = recordSeq;
+	}
+	public int getAverage() {
+		return average;
+	}
+	public void setAverage(int average) {
+		this.average = average;
+	}
+	
+}

@@ -1,0 +1,6 @@
+package repository;
+import domain.*;
+public interface ExamDAO {
+  public void insertExam(ExamBean exam);
+
+}

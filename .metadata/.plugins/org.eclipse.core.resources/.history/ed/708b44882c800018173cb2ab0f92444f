@@ -1,0 +1,8 @@
+package service;
+
+import domain.RecordBean;
+public interface RecordService {
+	public void createRecord(RecordBean member);
+	public void updateRecord(RecordBean member);
+	public void deleteRecord(RecordBean member);
+}

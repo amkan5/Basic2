@@ -1,0 +1,9 @@
+package repository;
+
+import domain.MemberBean;
+public interface MemberDAO {
+	public void insertMember(MemberBean member);
+	public void updateMember(MemberBean member);
+	public void dropMember(MemberBean member);
+	
+}

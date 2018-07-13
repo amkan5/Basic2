@@ -1,0 +1,7 @@
+package service;
+import domain.*;
+public interface ExamService {
+	public void createExam(ExamBean exam);
+	public void updateExam(ExamBean exam);
+	public void deleteExam(ExamBean exam);
+}

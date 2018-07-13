@@ -1,0 +1,25 @@
+package service;
+
+import domain.ExamBean;
+
+public class ExamServiceImpl implements ExamService {
+
+	@Override
+	public void createExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

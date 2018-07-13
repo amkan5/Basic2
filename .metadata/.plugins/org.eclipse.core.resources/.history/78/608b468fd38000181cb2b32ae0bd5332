@@ -1,0 +1,77 @@
+package service;
+import java.util.List;
+import java.util.Set;
+
+import domain.ExamBean;
+import domain.RecordBean;
+import domain.SubjectBean;
+import repository.ExamDAOImpl;
+import repository.RecordDAO;
+import repository.RecordDAOImpl;
+import repository.SubjectDAOImpl;
+public class ExamServiceImpl implements ExamService {
+	private static ExamService instance = new ExamServiceImpl();
+	public static ExamService getInstance() {
+		return instance;
+	}
+	private ExamServiceImpl() {
+		
+	}
+	@Override
+	public void createExam(ExamBean exam) {
+		String marks[] = exam.getScore().split(",");
+		String subjects[] = {"JAVA","SQL","R","HTML5","PYTHON"};
+		//성적표를 미리 만들어줌.? 
+		for(int i=0;i<5;i++) {
+			exam.setSubSeq(SubjectDAOImpl.getInstance().selectSome(
+					subjects[i]
+							).get(0).getSubSeq()
+					);
+			// exam.setRecordSeq(); 
+			exam.setScore(marks[i]);
+			ExamDAOImpl.getInstance().insertExam(exam);
+		}
+		RecordBean rec = new RecordBean();
+		rec.setGrade("");
+		rec.setAverage("");
+		RecordDAOImpl.getInstance().countRecord();
+		exam.setRecordSeq(RecordDAOImpl.getInstance().selectFirstRownum());
+	}
+
+	@Override
+	public void updateExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public List<ExamBean> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<ExamBean> selectSome(String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ExamBean selectOne(String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public int countExam() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

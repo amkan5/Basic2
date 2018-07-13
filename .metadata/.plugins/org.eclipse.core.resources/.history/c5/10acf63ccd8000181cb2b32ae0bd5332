@@ -1,0 +1,62 @@
+package service;
+import java.util.List;
+import domain.ExamBean;
+import repository.ExamDAOImpl;
+import repository.RecordDAO;
+import repository.RecordDAOImpl;
+public class ExamServiceImpl implements ExamService {
+	private static ExamService instance = new ExamServiceImpl();
+	public static ExamService getInstance() {
+		return instance;
+	}
+	private ExamServiceImpl() {
+		
+	}
+	@Override
+	public void createExam(ExamBean exam) {
+		String marks[] = exam.getScore().split(",");
+		for(int i=0;i<5;i++) {
+			exam.setSubSeq(String.valueOf(i+1));
+			exam.setScore(marks[i]);
+			ExamDAOImpl.getInstance().insertExam(exam);
+			//RecordServiceImpl.getInstance().createRecord(member);
+		}
+	}
+
+	@Override
+	public void updateExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public List<ExamBean> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<ExamBean> selectSome(String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ExamBean selectOne(String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public int countExam() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

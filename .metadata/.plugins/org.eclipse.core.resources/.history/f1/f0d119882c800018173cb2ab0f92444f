@@ -1,0 +1,8 @@
+package controller;
+import service.*;
+import domain.*;
+public class MemberController {
+	public void memberMark() {
+	 
+ }
+}

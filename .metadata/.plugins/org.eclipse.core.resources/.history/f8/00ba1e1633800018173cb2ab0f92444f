@@ -1,0 +1,22 @@
+package controller;
+import javax.swing.JOptionPane;
+import domain.*;
+import service.MemberServiceImpl;
+public class ExamController {
+	private static ExamController instance = new ExamController();
+	public static ExamController getInstance() {
+		return instance;
+	}
+	private ExamController() {
+	}
+	public void memberMark() {
+		 ExamBean exam = new ExamBean();
+		 exam.setMemId(
+				 MemberServiceImpl.getInstance().selectSome(
+						 JOptionPane.showInputDialog("name")
+						 ).get(0).getMemId()
+				 );
+		 exam.setMonth(JOptionPane.showInputDialog("month")); 
+		 
+	 }
+}

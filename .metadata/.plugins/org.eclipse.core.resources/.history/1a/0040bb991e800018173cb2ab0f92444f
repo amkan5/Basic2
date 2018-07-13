@@ -1,0 +1,43 @@
+package domain;
+
+public class Exam {
+	protected String memId; 
+	protected int examSeq, subSeq,score,month,recordSeq;
+	public String getMemId() {
+		return memId;
+	}
+	public void setMemId(String memId) {
+		this.memId = memId;
+	}
+	public int getExamSeq() {
+		return examSeq;
+	}
+	public void setExamSeq(int examSeq) {
+		this.examSeq = examSeq;
+	}
+	public int getSubSeq() {
+		return subSeq;
+	}
+	public void setSubSeq(int subSeq) {
+		this.subSeq = subSeq;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public int getRecordSeq() {
+		return recordSeq;
+	}
+	public void setRecordSeq(int recordSeq) {
+		this.recordSeq = recordSeq;
+	}
+
+}

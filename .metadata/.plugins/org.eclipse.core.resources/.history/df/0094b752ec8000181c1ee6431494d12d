@@ -1,0 +1,28 @@
+package test;
+import java.sql.*;
+public class JDBCTest {
+	public static void main(String[] args)  {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver"); 
+								//객체를 호출했는데 리턴받는값이없음. 여기서부터는 다른세상
+			Connection conn = DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe",
+					"KAN","1253");
+			String sql = "SELECT COUNT(*) AS COUNT FROM TAB";
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			String count = "";
+			while(rs.next()) { //회전수만큼 돌아라 
+				count = rs.getString("count");
+			}
+			System.out.println("테이블 갯수" + count);
+		} catch (SQLException e) { //sql문이 잘못되면 이쪽
+			// TODO Auto-generated catch block
+			System.out.println("에러 발생");
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) { //class가 없으면 이쪽 
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

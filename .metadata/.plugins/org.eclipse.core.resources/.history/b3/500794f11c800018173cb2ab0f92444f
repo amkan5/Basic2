@@ -1,0 +1,6 @@
+package domain;
+
+public class record {
+	protected String grade;
+	protected int recordSeq, average;
+}

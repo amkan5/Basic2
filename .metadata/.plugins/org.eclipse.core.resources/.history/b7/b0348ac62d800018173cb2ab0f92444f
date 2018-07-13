@@ -1,0 +1,46 @@
+package service;
+
+import java.util.List;
+import domain.RecordBean;
+public class RecordServiceImpl implements RecordService {
+
+	@Override
+	public void createRecord(RecordBean member) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateRecord(RecordBean member) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteRecord(RecordBean member) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public RecordBean[] selectSome(String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RecordBean> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RecordBean> selectOne(RecordBean Record) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

@@ -1,0 +1,6 @@
+package domain;
+
+public class Exam {
+	protected String memId,examSeq, subSeq,score,month,recordSeq; 
+
+}

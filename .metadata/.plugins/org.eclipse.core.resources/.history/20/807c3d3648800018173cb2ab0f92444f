@@ -1,0 +1,27 @@
+package controller;
+import javax.swing.JOptionPane;
+import domain.*;
+import service.ExamServiceImpl;
+import service.MemberServiceImpl;
+public class ExamController {
+	private static ExamController instance = new ExamController();
+	public static ExamController getInstance() {
+		return instance;
+	}
+	private ExamController() {
+	}
+	public void memberMark() {
+		 ExamBean exam = new ExamBean();
+	/*	 exam.setMemId(
+				 MemberServiceImpl.getInstance().selectSome(
+						 JOptionPane.showInputDialog("name")
+						 ).get(0).getMemId()
+				 );
+		exam.setMonth(JOptionPane.showInputDialog("month")); 
+		exam.setScore(JOptionPane.showInputDialog("java,sql,r,html,python"));*/
+		exam.setMemId("a");
+		exam.setMonth("7");
+		exam.setScore("90,80,70,60,50");
+		ExamServiceImpl.getInstance().createExam(exam);
+	 }
+}

@@ -1,0 +1,7 @@
+package service;
+import domain.*;
+public interface MemberService {
+	public void createMember(MemberBean member);
+	public void updateMember(MemberBean member);
+	public void delteMember(MemberBean member);
+}

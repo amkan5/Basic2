@@ -1,0 +1,25 @@
+package repository;
+
+import domain.RecordBean;
+
+public class RecordDAOImpl implements RecordDAO {
+
+	@Override
+	public void insertRecord(RecordBean record) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateRecord(RecordBean record) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delteRecord(RecordBean record) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package repository;
+
+import domain.RecordBean;
+
+public interface RecordDAO {
+	public void insertRecord(RecordBean record);
+	public void updateRecord(RecordBean record);
+	public void delteRecord(RecordBean record);
+}

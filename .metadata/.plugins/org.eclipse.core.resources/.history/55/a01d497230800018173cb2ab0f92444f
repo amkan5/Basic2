@@ -1,0 +1,11 @@
+package controller;
+
+public class RecordCntroller {
+	private static RecordCntroller instance = new RecordCntroller();
+	private static RecordCntroller getInstance() {
+		return instance;
+	}
+	public RecordCntroller() {
+		// TODO Auto-generated constructor stub
+	}
+}

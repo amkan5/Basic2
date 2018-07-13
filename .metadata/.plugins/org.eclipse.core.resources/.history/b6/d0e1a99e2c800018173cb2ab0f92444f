@@ -1,0 +1,45 @@
+package service;
+
+import java.util.List;
+
+import domain.ExamBean;
+
+public class ExamServiceImpl implements ExamService {
+	@Override
+	public void createExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteExam(ExamBean exam) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ExamBean list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ExamBean[] selectSome(String word) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ExamBean> selectOne(ExamBean Exam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

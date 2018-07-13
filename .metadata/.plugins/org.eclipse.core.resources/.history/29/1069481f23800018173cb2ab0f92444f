@@ -1,0 +1,7 @@
+package service;
+
+public interface ExamService {
+	public String createAve(String java,String sql,String r,String html,String python);
+	public String createGrade(String avg);
+	
+}
